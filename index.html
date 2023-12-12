@@ -30,13 +30,15 @@
 
                     <div v-if="task.done===false">
                         <div class="unchecked">{{task.text}} </div>
-                        <i id="delete" class="fa-solid fa-xmark"></i>                       
+                        <i class="fa-solid fa-xmark"></i> 
+                        <i class="fa-solid fa-delete-left"></i>                      
                     </div> 
 
 
                     <div v-else>
                         <div class="checked">{{task.text}}</div> 
-                        <i id="check" class="fa-solid fa-check" @click="deleteTask(index)"></i>
+                        <i class="fa-solid fa-check" ></i>
+                        <i class="fa-solid fa-delete-left" @click="deleteTask(index)"></i>
                     </div> 
                     
 
