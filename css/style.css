@@ -18,10 +18,21 @@ ul {
     list-style: none;
 }
 
-li {
-    border: 2px solid black;
+li div {
+    border-top: 2px solid black;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: space-between;
 }
 
-.checked {
-    text-decoration: overline;
+.checked{
+    text-decoration: line-through;
+    border: none;
+}
+
+.unchecked {
+    border: none;
 }

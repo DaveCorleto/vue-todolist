@@ -27,9 +27,7 @@ const app = Vue.createApp({
 
     data() {
       return {
-        message: 'sta funzionando Vue',
-        false: 'da fare',
-        true: 'fatto!',
+        index: 0,
         todos: [
           {
             text: 'Fare i compiti',
@@ -47,7 +45,9 @@ const app = Vue.createApp({
       };
     },
     methods: {
-      
+      deleteTask (task){
+        this.todos.splice(index, 1)
+      },
     }
   });
   
@@ -60,6 +60,9 @@ const app = Vue.createApp({
 // Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
 
 // Userò un v-for in 
-// Devo andare ad associare una classe con overline ai li con done===true 
+// Devo andare ad associare una classe con line-trough ai li con done===true 
+
+// MILESTONE 2
+// Visualizzare a fianco ad ogni item ha una “x”: cliccando su di essa, il todo viene rimosso dalla lista.
 
 

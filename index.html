@@ -21,19 +21,24 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <div id="app">
-        <h1>Logone</h1>
+        <h1>To Do List!</h1>
 
         <div class="listone">
             
             <ul>
-                <li v-for="task in todos">
-                    <div>{{task.text}} </div> 
+                <li v-for="(task, index) in todos">
+
                     <div v-if="task.done===false">
-                        <i class="fa-solid fa-xmark"></i>
-                    </div>
+                        <div class="unchecked">{{task.text}} </div>
+                        <i id="delete" class="fa-solid fa-xmark"></i>                       
+                    </div> 
+
+
                     <div v-else>
-                        <i class="fa-solid fa-check"></i>
-                    </div>
+                        <div class="checked">{{task.text}}</div> 
+                        <i id="check" class="fa-solid fa-check" @click="deleteTask(index)"></i>
+                    </div> 
+                    
 
                 </li>
             </ul>
