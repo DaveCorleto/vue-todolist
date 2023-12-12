@@ -24,20 +24,24 @@
         <h1>To Do List!</h1>
 
         <div class="listone">
+
+
+            <div class="add-task">
+                <input type="text" v-model="newTask" placeholder="Inserisci nuova task" @keyup.enter="addTask">
+                <button @click="addTask">Aggiungi</button>
+            </div>
             
             <ul>
                 <li v-for="(task, index) in todos" :key="index">
 
                     <div v-if="task.done===false">
-                        <div class="unchecked">{{task.text}} </div>
-                        <i class="fa-solid fa-xmark"></i> 
-                        <i class="fa-solid fa-delete-left"></i>                      
+                        <div class="unchecked">{{task.text}} </div> 
+                        <i class="fa-solid fa-delete-left" @click="deleteTask(index)" @key-up.enter></i>                      
                     </div> 
 
 
                     <div v-else>
                         <div class="checked">{{task.text}}</div> 
-                        <i class="fa-solid fa-check" ></i>
                         <i class="fa-solid fa-delete-left" @click="deleteTask(index)"></i>
                     </div> 
                     
