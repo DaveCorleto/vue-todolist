@@ -27,7 +27,7 @@ const app = Vue.createApp({
 
     data() {
       return {
-        index: 0,
+
         todos: [
           {
             text: 'Fare i compiti',
@@ -48,7 +48,9 @@ const app = Vue.createApp({
       deleteTask (task){
         this.todos.splice(index, 1)
       },
+    //   nextIndex () {this.index++;}
     }
+
   });
   
   app.mount("#app");

@@ -26,7 +26,7 @@
         <div class="listone">
             
             <ul>
-                <li v-for="(task, index) in todos">
+                <li v-for="(task, index) in todos" :key="index">
 
                     <div v-if="task.done===false">
                         <div class="unchecked">{{task.text}} </div>
