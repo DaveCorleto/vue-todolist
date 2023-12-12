@@ -32,7 +32,7 @@
             </div>
             
             <ul>
-                <li v-for="(task, index) in todos" :key="index">
+                <li v-for="(task, index) in todos" :key="index" @click="checkedTask">
 
                     <div v-if="task.done===false">
                         <div class="unchecked">{{task.text}} </div> 
