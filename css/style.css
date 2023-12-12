@@ -1,0 +1,27 @@
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Kalnia', serif;
+}
+
+#app {
+    width: 90%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    border: 2px solid black;
+}
+
+.checked {
+    text-decoration: overline;
+}
